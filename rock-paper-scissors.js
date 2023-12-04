@@ -4,6 +4,12 @@ function getComputerChoice() {
     return (random, computerMove[random]);
 }
 
-function playRound(playerSelectoin, computerSelection) {
-    
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection > computerSelection) {
+        return result = 'You win!';
+    } else if (playerSelection == computerSelection) {
+        return result = 'It\'s a tie! Try again!';
+    } else {
+        return result = 'You lose!';
+    }
 }
