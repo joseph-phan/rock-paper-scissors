@@ -14,3 +14,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    for (i = 0; i <= 5; i++) {
+        playRound()
+    }
+}
