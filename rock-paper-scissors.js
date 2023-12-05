@@ -23,5 +23,11 @@ function game() {
     for (i = 0; i <= 5; i++);
     playRound();
     let playerInput = (prompt('Enter your option:', ''));
-    
+    if (result = 'Congrats! You win!' + point) {
+        return console.log('Point goes to you!');
+    } else {
+        return console.log('Point goes to CPU!');
+    }
 }
+
+console.log(game());
