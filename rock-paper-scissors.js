@@ -5,14 +5,15 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    let point = 1;
     if (playerSelection === computerSelection) {
         return result = 'It is a tie! Try again!';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        return result = 'Congrats! You win!';
+        return result = 'Congrats! You win!' + point;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return result = 'Congrats! You win!';
+        return result = 'Congrats! You win!' + point;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return result = 'Congrats! You win!';
+        return result = 'Congrats! You win!' + point;
     } else {
         return result = 'You lose!';
     }
