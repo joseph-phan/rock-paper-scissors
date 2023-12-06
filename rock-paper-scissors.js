@@ -19,14 +19,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (i = 0; i <= 5; i++);
-    playRound();
-    let playerInput = (prompt('Enter your option:', ''));
-    let point = 1;
-    if (result = 'Congrats! You win!' + point) {
-        return console.log('Point goes to you!');
-    } else {
-        return console.log('Point goes to CPU!');
+    for (i = 0; i < 5; i++) {
+        console.log(playRound(prompt('Enter your choice:')));
     }
 }
 
