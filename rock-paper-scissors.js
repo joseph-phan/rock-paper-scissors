@@ -21,7 +21,6 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for (i = 0; i < 5; i++) {
         console.log(playRound(prompt('Enter your choice:'), getComputerChoice()));
-        
     }
 }
 
