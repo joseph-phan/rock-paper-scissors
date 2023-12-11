@@ -1,6 +1,6 @@
 let userScore = 0;
 let cpuScore = 0;
-let tie;
+let tie = 0;
 
 function getComputerChoice() {
     const computerMove = ['rock', 'paper', 'scissors'];
@@ -10,32 +10,32 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        tie = 0;
+        tie++;
         return result = 'It is a tie! Try again!';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         userScore++;
-        return result = `Congrats! You win! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+        return result = `Nice job! You chose ${playerSelection} and the computer chose ${computerSelection}`;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         userScore++;
-        return result = `Congrats! You win! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+        return result = `Nice job! You chose ${playerSelection} and the computer chose ${computerSelection}`;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         userScore++;
-        return result = `Congrats! You win! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+        return result = `Nice job! You chose ${playerSelection} and the computer chose ${computerSelection}`;
     } else {
         cpuScore++;
-        return result = `You lose! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+        return result = `Sorry! You chose ${playerSelection} and the computer chose ${computerSelection}`;
     }
 }
 
 function game() {
     for (i = 0; i < 5; i++) {
         console.log(playRound(prompt('Rock, Paper, or Scissors?:').toLowerCase(), getComputerChoice()));
-        if (tie = 0) {
-            console.log(point = 'No points given!');
+        if (cpuScore) {
+            console.log(point = `Score is ${userScore} to ${cpuScore}`);
         } else if (userScore) {
             console.log(point = `Score is ${userScore} to ${cpuScore}`);
         } else {
-            console.log(point = `Score is ${userScore} to ${cpuScore}`)
+            console.log('No points given!');
         }
     }
     if (userScore > cpuScore) {
