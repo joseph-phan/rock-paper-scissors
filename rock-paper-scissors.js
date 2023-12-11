@@ -27,7 +27,13 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (i = 0; i < 5; i++) {
-        console.log(playRound(prompt('Rock, Paper, or Scissors?:').toLowerCase(), getComputerChoice()));
+        let roundResult = (playRound(prompt('Rock, Paper, or Scissors?:').toLowerCase(), getComputerChoice()));
+        console.log(roundResult);
+
+        while(roundResult.includes('Try again!')) {
+            roundResult = (playRound(prompt('Rock, Paper, or Scissors?:').toLowerCase(), getComputerChoice()))
+            console.log(roundResult);
+        }
 
         console.log(point = `You: ${userScore} CPU: ${cpuScore}`);
     }
