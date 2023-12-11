@@ -10,7 +10,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        tie;
+        tie = 0;
         return result = 'It is a tie! Try again!';
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
         userScore++;
